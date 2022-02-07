@@ -19,7 +19,7 @@ def index(request):
     'max_temperature' : round(data['main']['temp_max'] - 273, ndigits=3), 
     'pressure' : data['main']['pressure'], 
     'humidity' : data['main']['humidity'],
-    'clouds': data['visibility'],
+    'clouds': (data['visibility'])/1000, #visibility here not clouds
     'wind_speed': data['wind']['speed'],
     # 'sunset' : data['sys']['sunrise'][0:4]
     'description': data['weather'][0]['description']
