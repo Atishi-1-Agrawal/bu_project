@@ -53,7 +53,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'the_weather.urls'
 
 TEMPLATE_DIR = (
-    '/Users/atishiagrawal/Desktop/bu_project/the_weather/weather/templates' #your file path ,this is my template directory path
+    '/Users/shubham/Desktop/bu_project/the_weather/weather/templates' #your file path ,this is my template directory path
 )
 
 TEMPLATES = [

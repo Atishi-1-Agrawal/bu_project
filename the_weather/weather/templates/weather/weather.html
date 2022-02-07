@@ -76,31 +76,35 @@
 
 
         <div style="width: 50%; height: fit-content; border: 1px solid black; background-color: #FFE162; overflow: scroll;">
-            <form style="margin: 10px;"> 
+            <form style="margin: 10px;" method="get"> 
                 <div style="display: flex; justify-content: center; font-size: 2rem; letter-spacing: 2px;">Weather app</div>
                 <div style="display: flex; flex-direction: row; margin-left: 40px; justify-content: center; margin-top: 10px;" >
-                    <input type="text" class="text_input" placeholder="city name">
+                    <input type="text" class="text_input" placeholder="city name" name="city">
                     <button class="btn" type="submit">fetch data</button>
                 
                 </div>
             </form>
+            <div style="display: flex; justify-content: center; margin-bottom: 10px;">
+            <div style="display: flex; justify-content: center; border: 1px solid pink; width: 100px; padding: 10px; border-radius: 5px; background-color: #FF6464; color: white; ">{{data.city}}</div> 
+        </div>
             <div style="height: 55%;  overflow: hidden; width: auto;">
                 <img src="https://res.cloudinary.com/ayshubham/image/upload/v1643090141/5-Best-Free-and-Paid-Weather-APIs-2019-e1587582023501_fr2jxm.png" alt="" style="height: 350px; width: 100%; overflow: hidden;" >
             </div>
             <div style="display: flex; justify-content: space-evenly; overflow: hidden;">
 
                 <div style="margin-top: 10px ;">
-                    <div class="display">Weather</div> 
-                    <div class="display">Temp_Max</div> 
-                    <div class="display">Temp_Min</div> 
-                    <div class="display">Pressure</div> 
+                    <div class="display">Feels like {{data.description}}</div>
+                    <div class="display">Min Temp : {{data.min_temperature}} °C</div> 
+                    <div class="display">Max Temp : {{data.max_temperature}} °C</div>
+                    <div class="display">Pressure : {{data.pressure}} mb</div> 
+                    
  
                 </div>
                 <div style="margin-top: 10px ;" >
-                    <div class="display">Speed</div>
-                    <div class="display">Humidity</div>
-                    <div class="display">Clouds</div>
-                    <div class="display">Wind</div>
+                    
+                    <div class="display">Humidity : {{data.humidity}} %</div>
+                    <div class="display">Visibility : {{data.clouds}} KM</div>
+                    <div class="display">Wind Speed : {{data.wind_speed}} M/S</div>
 
                 </div>
                 
