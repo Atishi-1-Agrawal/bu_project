@@ -23,8 +23,6 @@ def index(request):
     'wind_speed': data['wind']['speed'],
     # 'sunset' : data['sys']['sunrise'][0:4]
     'description': data['weather'][0]['description']
-
-    
     }
 
     context = {'data' : payload}
